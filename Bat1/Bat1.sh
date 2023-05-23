@@ -52,7 +52,7 @@ do
 
 	j=$(basename $i);
 	diff -w temp ./sp/$j > /dev/null ;
-	rm temp;
+	#rm temp;
 	if [ $? -eq 0 ]; then
 		echo -e "\e[32mOK\e[0m"
 	else
