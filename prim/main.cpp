@@ -33,7 +33,6 @@ int main(int argc, char **argv)
             cout << "\n---- HELP ---- " << endl;
             cout << "\n-o <arquivo> : redireciona a saida para o ‘‘arquivo’’" << endl;
             cout << "-f <arquivo> : indica o ‘‘arquivo’’ que contém o grafo de entrada" << endl;
-            cout << "-s : mostra a solução (em ordem crescente)" << endl;
             cout << "-i : vértice inicial (para o algoritmo de Prim)" << endl;
         }
     }
@@ -97,7 +96,10 @@ int main(int argc, char **argv)
                 init *= (-1);
 
             if (i == strlen(argv[j]))
+            {
+                init -= 1;
                 break;
+            }
         }
     }
 
