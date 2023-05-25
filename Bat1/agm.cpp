@@ -35,11 +35,7 @@ int main(int argc, char* argv[])
 		adj[v2-1].push_back(v1-1);
 	}
 
-
-
 	int custo = 0;
-	cin >> custo;
-
 	for(int i=0; i<m; ++i)
 	{
 		int v1, v2, p;

@@ -123,7 +123,7 @@ int main(int argc, char **argv)
     vector<int> dist(n, INT_MAX);
     vector<int> parent(n);
 
-    dist[1] = 0;
+    dist[init] = 0;
 
     for (int i = 1; i <= n - 1; i++)
     {

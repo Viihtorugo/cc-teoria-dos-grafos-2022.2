@@ -34,6 +34,7 @@ int main(int argc, char **argv)
             cout << "\n-o <arquivo> : redireciona a saida para o ‘‘arquivo’’" << endl;
             cout << "-f <arquivo> : indica o ‘‘arquivo’’ que contém o grafo de entrada" << endl;
             cout << "-i : vértice inicial (para o algoritmo de Prim)" << endl;
+            cout << "-s : mostra a solução (em ordem crescente), caso não informado o custo será mostrado!\n\n";
         }
     }
 
@@ -145,7 +146,6 @@ int main(int argc, char **argv)
     for (int peso : pesos)
         soma += peso;
 
-    cout << soma << endl;
 
     vector<vector<int>> graph_agm(n);
 
@@ -180,6 +180,8 @@ int main(int argc, char **argv)
         for (int i = 0; i < n; i++)
             if (agm[i] != -1)
                 graph_agm[i].push_back(agm[i]);
+        
+        cout << soma << endl;
     }
 
     //Criando arquivo de saida

@@ -72,7 +72,7 @@ int main(int argc, char **argv)
             cout << "\n---- HELP ---- " << endl;
             cout << "\n-o <arquivo> : redireciona a saida para o ‘‘arquivo’’" << endl;
             cout << "-f <arquivo> : indica o ‘‘arquivo’’ que contém o grafo de entrada" << endl;
-            cout << "-s : mostra a solução (em ordem crescente)" << endl;
+            cout << "-s : mostra a solução (em ordem crescente), caso não informado o custo será mostrado!" << endl;
         }
     }
 
@@ -149,8 +149,6 @@ int main(int argc, char **argv)
     for (auto edge: agm)
         soma += edge.peso;
 
-    cout << soma << endl;
-
     //saida ordenada
     if (ord_agm)
     {
@@ -160,6 +158,10 @@ int main(int argc, char **argv)
             cout << "(" << edge.v + 1 << "," << edge.w + 1 << ") ";    
         
         cout << endl;
+    }
+    else
+    {
+        cout << soma << endl;
     }
     
     //criando o arquivo de saida
