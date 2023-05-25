@@ -1,1 +1,5 @@
 .vscode/
+Bat1/dijkstra.bin
+Bat1/kruskal.bin
+Bat1/prim.bin
+Bat1/bellman-ford.bin
