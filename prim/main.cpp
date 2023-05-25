@@ -108,8 +108,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-
-    //Iniciar o algoritmo de prim
+    //Iniciando o algoritmo de prim
     priority_queue<pair<int, int>> pq;
 
     vector<int> agm(n, -1);
@@ -132,11 +131,12 @@ int main(int argc, char **argv)
             if (visited[edges.first] == false && edges.second < pesos[edges.first])
             {
                 pesos[edges.first] = edges.second;
-                pq.push({-edges.second, edges.first});
+                pq.push({-edges.second, edges.first}); //ordenando através do numero inverso!
                 agm[edges.first] = edge.second;
             }
         }
     }
+    //Finalizando o algoritmo de prim
 
     int soma = 0;
 
@@ -169,7 +169,7 @@ int main(int argc, char **argv)
             if (graph_agm[i].size() > 0)
                 for (int v : graph_agm[i])
                     cout << "(" << i + 1 << "," << v + 1 << ") ";
-                    
+
         cout << endl;
 
     }
@@ -180,6 +180,7 @@ int main(int argc, char **argv)
                 graph_agm[i].push_back(agm[i]);
     }
 
+    //Criando arquivo de saida
     if (output)
     {
         ofstream out_file;

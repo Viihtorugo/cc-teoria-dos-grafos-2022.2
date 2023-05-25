@@ -5,6 +5,7 @@ prim=./prim.bin
 kruskal=./kruskal.bin
 dijkstra=./dijkstra.bin
 
+echo -e "\n";
 
 echo "Testando algoritmo de Kruskal"
 for i in instances/*.mtx
