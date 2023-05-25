@@ -24,7 +24,8 @@ vn vn pn
 * n é o número de vertices;
 * m é o número de arestas;
 * O par de v's (v1 v2) são as arestas;
-* p é o peso das arestas.
+* p é o peso das arestas;
+* Importante: para grafos não direcionados é preciso informar o arco de ida e volta!
 
 ## Saída do algoritmo
 
