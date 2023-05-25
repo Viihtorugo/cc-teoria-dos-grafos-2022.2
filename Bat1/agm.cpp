@@ -38,13 +38,15 @@ int main(int argc, char* argv[])
 
 
 	int custo = 0;
+	cin >> custo;
+
 	for(int i=0; i<m; ++i)
 	{
 		int v1, v2, p;
 		cin >> v1 >> v2;
 		bool eh_aresta = false;
-		for(auto i : adj[v1-1])
-			if(i == (v2-1) )
+		for(auto j : adj[v1-1])
+			if(j == (v2-1) )
 			{
 				eh_aresta = true;
 				break;

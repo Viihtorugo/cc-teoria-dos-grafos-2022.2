@@ -53,18 +53,9 @@ int main(int argc, char **argv)
     }
 
     for (int i = 0; i < dist.size(); i++)
-    {
-        cout << i + 1 << ":" << dist[i];
+        cout << i + 1 << ":" << dist[i] << " ";
 
-        if (i + 1 != dist.size())
-        {
-            cout << " ";
-        }
-        else
-        {
-            cout << endl;
-        }
-    }
+    cout << endl;
 
     return 0;
 }

@@ -68,6 +68,8 @@ int main(int argc, char **argv)
         graph[w - 1].push_back({v - 1, p});
     }
 
+    arquivo.close();
+
     vector<edge> edges(n);
 
     for (int i = 0; i < n; i++)
@@ -111,124 +113,13 @@ int main(int argc, char **argv)
     int soma = 0;
     for (auto edge: agm)
     {
-        cout << "(" << edge.v + 1 << "," << edge.w + 1 << ")";    
+        cout << "(" << edge.v + 1 << "," << edge.w + 1 << ") ";    
         soma += edge.peso;
     }
 
     cout << endl;
 
     cout << soma << endl;
-
-    /*
-    for (int i = 0; i < n; i++)
-        arv[i] = i;
-
-    int orig = 0, dest = 0;
-    pai[orig] = orig;
-
-
-    for (int i = 0; i < graph.size(); i++)
-    {
-        cout << "v" << i + 1 << " -> ";
-
-        while (!graph[i].empty())
-        {
-            cout << "v" << graph[i].top().second + 1 << ": peso " << -graph[i].top().first << " ";
-            graph[i].pop();
-        }
-
-        cout << endl;
-    }
-
-    return 1;
-
-    int soma = 0, menor_peso;
-
-    while (1)
-    {
-        int breaking = true;
-
-        for (int i = 0; i < n; i++)
-        {
-            for (auto edge : graph[i])
-            {
-                if (arv[i] != arv[edge.first])
-                {
-                    if (breaking)
-                    {
-                        menor_peso = edge.second;
-                        orig = i;
-                        dest = edge.first;
-                        breaking = false;
-                    }
-                    else
-                    {
-                        if (menor_peso > edge.second)
-                        {
-                            menor_peso = edge.second;
-                            orig = i;
-                            dest = edge.first;
-                        }
-                    }
-                }
-            }
-        }
-
-        if (breaking)
-            break;
-
-        soma += menor_peso;
-
-        if (pai[orig] == -1)
-        {
-            pai[orig] = dest;
-        }
-        else
-        {
-            pai[dest] = orig;
-        }
-
-        for (int i = 0; i < n; i++)
-            if (arv[i] == arv[dest])
-                arv[i] = arv[orig];
-
-    }
-    soma -= menor_peso;
-
-    cout << "arv: ";
-
-    for (int i = 0; i < n; i++)
-    {
-        cout << arv[i];
-
-        if (i + 1 == n)
-        {
-            cout << endl;
-        }
-        else
-        {
-            cout << " ";
-        }
-    }
-
-    cout << "pai: ";
-
-    for (int i = 0; i < n; i++)
-    {
-        cout << "(" << i + 1 << "," << pai[i] + 1 << ")";
-
-        if (i + 1 == n)
-        {
-            cout << endl;
-        }
-        else
-        {
-            cout << " ";
-        }
-    }
-
-    cout << "soma: " << soma << endl;
-    */
 
     return 0;
 }
